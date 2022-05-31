@@ -11,6 +11,10 @@ body {
     color: hsl(243, 87%, 12%);
 }
 
+.container {
+    max-width: 1440px;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -103,9 +107,10 @@ a,
 
 .bg-img {
     background-size: cover;
-    background-color: hsl(240, 75%, 98%);
+    background-color: #F8F8FE;
     margin-top: 15rem;
     position: relative;
+    /* overflow: hidden; */
 }
 
 .bg-img::before {
@@ -115,7 +120,7 @@ a,
     top: -5rem;
     left: 0;
     height: 5rem;
-    width: 100rem;
+    width: 84rem;
 }
 
 .sec-2 {
@@ -325,9 +330,12 @@ footer {
     padding: 10px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 414px) {
     body {
         text-align: center;
+    }
+    .container {
+        /* overflow: hidden; */
     }
     header {
         justify-content: space-between;
@@ -372,7 +380,10 @@ footer {
         width: 100%;
         margin-left: 0;
     }
-    .button,
+    .sign-up>form>.button {
+        margin-bottom: 5rem;
+        width: 100%;
+    }
     .footer-callToAction>.button {
         width: 100%;
     }
@@ -407,7 +418,7 @@ footer {
     .bg-img {
         background-repeat: no-repeat;
         background-size: cover;
-        background-color: hsl(240, 75%, 98%);
+        background-color: #F8F8FE;
         padding: 3rem;
         position: relative;
         width: 100%;
